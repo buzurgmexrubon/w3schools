@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W3Schools Clone</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Darsliklar</h1>
+    <ul>
+        {% for tutorial in tutorials %}
+        <li><a href="{% url 'tutorial_detail' tutorial.slug %}">{{ tutorial.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

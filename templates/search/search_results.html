@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Qidiruv natijalari</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Qidiruv natijalari: "{{ query }}"</h1>
+    <ul>
+        {% for tutorial in tutorials %}
+        <li><a href="{% url 'tutorial_detail' tutorial.slug %}">{{ tutorial.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

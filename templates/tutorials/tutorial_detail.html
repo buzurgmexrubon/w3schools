@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ tutorial.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <a href="{% url 'tutorial_list' %}">Bosh sahifa</a>
+    <h1>{{ tutorial.title }}</h1>
+    <div>
+        {{ content|safe }}
+    </div>
+</body>
+</html>
